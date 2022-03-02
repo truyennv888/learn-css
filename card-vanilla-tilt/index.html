@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Vanilla Tilt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="content">
+                <span class="number">01</span>
+                <div class="title">Card One</div>
+                <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, voluptatem? Suscipit incidunt laboriosam porro laborum?</p>
+                <a href="#" class="button">Download Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <span class="number">02</span>
+                <div class="title">Card Two</div>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repudiandae quos, rem dignissimos blanditiis asperiores!</p>
+                <a href="#" class="button">Download Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <span class="number">03</span>
+                <div class="title">Card Three</div>
+                <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi ducimus dolore atque doloremque cupiditate quaerat?</p>
+                <a href="#" class="button">Download Now</a>
+            </div>
+        </div>
+    </div>
+    <script src="vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.5
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.container{    
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-items: center;
+    .item{
+        position: relative;
+        width: 320px;
+        height: 400px;
+        margin: 30px;
+        transition: 0.5s;
+        &:hover{
+            cursor: pointer;
+            transform: translateY(-20px);
+        }
+        &::before,
+        &::after{
+            content: '';
+            position: absolute;
+            z-index: 1;
+            left:0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(45deg, #ffbc00, #ff0058);
+        }
+        &::after{
+            filter: blur(30px);
+        }
+        &:nth-child(2)::before,
+        &:nth-child(2)::after{
+            background: linear-gradient(315deg, #03a9f4, #ff0058);
+        }
+        &:nth-child(3)::before,
+        &:nth-child(3)::after{
+            background: linear-gradient(315deg, #4dff03, #00d0ff);
+        }
+        .border{
+            position: absolute;
+            z-index: 2;
+            left:4px;
+            right:4px;
+            top:4px;
+            bottom:4px;
+            background: rgba($color: #000, $alpha: .6);
+            &::before{
+                content: '';
+                position: absolute;
+                z-index: 3;
+                left: 0;
+                right: 50%;
+                height: 100%;
+                background: rgba($color: #fff, $alpha: .1);
+                pointer-events: none;
+            }
+        }
+        .body{
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 100%;
+            z-index: 4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 150px;
+            font-weight: 900;
+            color: #Fff;
+            text-shadow: 0 3px 10px rgba($color: #000, $alpha: .5);
+        }
+    }
+}

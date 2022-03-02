@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.container .item {
+  position: relative;
+  width: 320px;
+  height: 400px;
+  margin: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .item:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.container .item::before, .container .item::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(45deg, #ffbc00, #ff0058);
+}
+
+.container .item::after {
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+}
+
+.container .item:nth-child(2)::before, .container .item:nth-child(2)::after {
+  background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+
+.container .item:nth-child(3)::before, .container .item:nth-child(3)::after {
+  background: linear-gradient(315deg, #4dff03, #00d0ff);
+}
+
+.container .item .border {
+  position: absolute;
+  z-index: 2;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+  bottom: 4px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.container .item .border::before {
+  content: '';
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.container .item .body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 150px;
+  font-weight: 900;
+  color: #Fff;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+/*# sourceMappingURL=style.css.map */
